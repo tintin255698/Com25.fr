@@ -1,0 +1,802 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Com25 - Agence de communication -{% endblock %}
+
+{% block body %}
+
+    <div id="preloader">
+<div id="spinner"></div>
+    </div>
+
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success text-center">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <nav class="nav" id="nav">
+        <div class="container-fluid cont">
+            <!-- LOGO -->
+            <img src="{{asset('logoSite/_logo__1_-removebg-preview.png')}}" alt="Com25" class="img">
+            <!-- NAVIGATION MENU -->
+            <ul class="filter-nav nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger menu-btn">
+                <span class="menu-btn__burger">
+
+                </span>
+                </label>
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                    <li><a href="#link1" class="current navigation__item nav-link">Accueil</a></li>
+                    <li><a href="#link2" class="navigation__item nav-link">Nos activités</a></li>
+                    <li><a href="#link3" class="navigation__item nav-link">Notre méthode</a></li>
+                    <li><a href="#link4" class="navigation__item nav-link">Nos projets</a></li>
+                    <li><a href="#link5" class="navigation__item nav-link">Nos avis</a></li>
+                    <li><a href="#link6" class="navigation__item nav-link">Contactez-nous</a></li>
+                    <li><a href="#link7" class="navigation__item nav-link">Nous</a></li>
+                    <li><a href="#link8" class="navigation__item nav-link">Localisation</a></li>
+                    <li ><a href="tel:+330615693353"  class="num">Tél : 0615693353</a></li>
+                    <li>
+                        <input type="checkbox" id="switch" />
+                        <label for="switch" id="label">
+                            <i class='dark bx bxs-sun' data-mode="light"></i>
+                            <i class="dark bx bxs-moon" data-mode="dark"></i>
+                            <span class="ball"></span>
+                        </label>
+                    </li>
+                </div>
+
+            </ul>
+        </div>
+
+
+    </nav>
+    <div>
+
+        <div class="owl-carousel  template__section"  id="link1" >
+
+            <div class="header background1">
+
+                <h1>Agence de communication</h1>
+                <div style="width:15%;height:1px;background-color: white;font-size:0; margin-top:20px" class="trait"></div>
+
+                <div class="in container-fluid">
+                    <div class="tr">
+                        <h3>Tous clients</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>Tous budgets</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>Tous projets</h3>
+                    </div>
+                </div>
+                <div class="devis1">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#devis" class="btn btn-outline-dark">Devis gratuit</button>
+                </div>
+                <div class="round" onclick="scrollWin()" >
+                    <span class="arrow primera next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                    <span class="arrow segunda next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                </div>
+            </div>
+            <div class="header background2">
+                <h1>Créez votre site internet</h1>
+                <div style="width:15%;height:1px;background-color: white;font-size:0; margin-top:20px" class="trait"></div>
+                <div class="in container-fluid">
+                    <div class="tr">
+                        <h3>Sur-mesure</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>Vitrine</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>E-commerce</h3>
+                    </div>
+                </div>
+                <div class="devis1">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#devis" class="btn btn-outline-dark">Devis gratuit</button>
+                </div>
+                <div class="round" onclick="scrollWin()" >
+                    <span class="arrow primera next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                    <span class="arrow segunda next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                </div>
+            </div>
+
+            <div class="header background3">
+
+                <h1>Assurez votre communication</h1>
+                <div style="width:15%;height:1px;background-color: white;font-size:0; margin-top:20px" class="trait"></div>
+                <div class="in container-fluid">
+                    <div class="tr">
+                        <h3>Prospectus</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>Tracts</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>Impression</h3>
+                    </div>
+                </div>
+                <div class="devis1">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#devis" class="btn btn-outline-dark">Devis gratuit</button>
+                </div>
+                <div class="round" onclick="scrollWin()" >
+                    <span class="arrow primera next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                    <span class="arrow segunda next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                </div>
+            </div>
+            <div class="header background4">
+
+                <h1>Définissez votre entreprise</h1>
+                <div style="width:15%;height:1px;background-color: white;font-size:0; margin-top:20px" class="trait"></div>
+
+                <div class="in container-fluid">
+                    <div class="tr">
+                        <h3>Logo</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>SEA</h3>
+                    </div>
+                    <div class="tr">
+                        <h3>SEO</h3>
+                    </div>
+                </div>
+                <div class="devis1">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#devis" class="btn btn-outline-dark">Devis gratuit</button>
+                </div>
+                <div class="round" onclick="scrollWin()" >
+                    <span class="arrow primera next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                    <span class="arrow segunda next "><i class='bx bx-chevron-down bx-burst' ></i></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container template__section activite" id="link2" >
+        <h1 class="text-center" data-aos="fade-up" data-aos-anchor="#link2">Nos activités</h1>
+
+        <div class="row mt-4">
+            <div class=" col-lg-6 col-12 inline">
+                <h5 class="h5 txt mb-3">Sites Internets</h5>
+                <p>Basé sur une maquette définie au préalable, nous vous créons le site soit manuellement soit via Wordpress ou Prestashop. C'est
+                    vous qui choisissez !</p>
+            </div>
+            <div class=" col-lg-6 col-12 inline">
+                <h5 class="h5 txt mb-3">Logos</h5>
+                <p>Que vous aillez déjà une idée de ce que vous voulez comme logo ou non, nous imaginons celui qui sera à votre gout !</p>
+            </div>
+
+            <div class=" col-lg-6 col-12 inline mt-3">
+                <h5 class="h5 txt mb-3">Publicités</h5>
+                <p>Vous nous dites ce que vous voulez, on le fait : nous écoutons vos attentes puis
+                    nous faisons le flyer que vous souhaitez avec impression !</p>
+            </div>
+            <div class=" col-lg-6 col-12 inline mt-3">
+                <h5 class="h5 txt mb-3">SEA/SEO</h5>
+                <p>Vous souhaitez lancer un nouveau produit, qu'il soit connu rapidement (SEA) ! / Vous préférez prendre votre temps pour
+                    être référencé (SEO) ! </p>
+            </div>
+
+            <div class="text-center mt-5">
+                <button type="button" class="btn devis"  data-bs-toggle="modal" data-bs-target="#contact">Intéressé ?</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid template__section methode top"  id="link3" >
+
+        <h1 class="text-start" data-aos="fade-right" data-aos-anchor="#link3">Notre méthode de travail ...</h1>
+        <div class="mt-4">
+            <div class="cerc">
+                <div class="cercle"><p class="b">1</p><h5>Découvrir</h5> <p>vos besoins et attentes.</p></div>
+                <div class="cercle"><p class="b">2</p><h5>Créer</h5> <p>selon le cahier des charges.</p></div>
+                <div class="cercle"><p class="b">3</p><h5>Produire</h5> <p>un résultat dans les temps.</p></div>
+            </div>
+            <div class=" text-end ot mt-5">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="btn devis buy to">... au service de votre satisfaction</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid template__section projet top" id="link4">
+        <h1 class="text-center" data-aos="fade-up" data-aos-anchor="#link4">Nos projets</h1>
+
+        <div>
+            <ul class="filter-menu container">
+                <li data-filter="*" class="button is-checked filt ">Tous</li>
+                <li data-filter=".filter-web"  class="button filt">Sites</li>
+                <li data-filter=".filter-logo"  class="button filt">Logos</li>
+                <li data-filter=".filter-pub"  class="button filt">Flyers</li>
+                <li data-filter=".filter-autre"  class="button filt">Autres</li>
+            </ul>
+        </div>
+
+        <div class="container-fluid mt-5 " >
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3  projet-pad filter-web ">
+                    <img src="{{asset('besanconcommunication/jodelapcoaching.png')}}" alt="jodelapCoaching.com" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1 class="titre">jodelapCoaching.com</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/jodelapcoaching.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                            <a href="https://www.jodelapcoaching.com/" target="_blank"><i class='bx bx-desktop bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-autre">
+                    <img src="{{asset('besanconcommunication/autre/277366768_728396301850924_7256974623704607003_n.png')}}" alt="Stop Pub Poulet" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Stop Pub Poulet</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/autre/277366768_728396301850924_7256974623704607003_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-autre">
+                    <img src="{{asset('besanconcommunication/autre/277836250_1277045662819740_3609884857081234737_n.png')}}" alt="Stop Pub Pieuvre" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Stop Pub Pieuvre</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/autre/277836250_1277045662819740_3609884857081234737_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-logo">
+                    <img src="{{asset('besanconcommunication/logo/278057135_554879392528418_6992215744539031097_n.png')}}" alt="CDS" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>CDS</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/278057135_554879392528418_6992215744539031097_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-autre">
+                    <img src="{{asset('besanconcommunication/autre/277909620_3118235215085534_6039639368541130943_n.png')}}" alt="Stop Pub Voiture" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Stop Pub Voiture</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/autre/277909620_3118235215085534_6039639368541130943_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-logo">
+                    <img src="{{asset('besanconcommunication/logo/277926180_311389021136183_7571612520340074829_n.png')}}" alt="Ride Ability Camp" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Ride Ability Camp</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/277926180_311389021136183_7571612520340074829_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-logo">
+                    <img src="{{asset('besanconcommunication/logo/277933414_4982522075166146_3812161891565386608_n.png')}}" alt="Cycleohm" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Cycleohm</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/277933414_4982522075166146_3812161891565386608_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-autre">
+                    <img src="{{asset('besanconcommunication/logo/277928459_681899993145454_3113146068726006889_n.png')}}" alt="Stop Pub Koala" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Stop Pub Koala</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/277928459_681899993145454_3113146068726006889_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-logo">
+                    <img src="{{asset('besanconcommunication/logo/277969394_1387706938333776_159119919660884134_n.png')}}" alt="Morre Station" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Morre Station</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/277969394_1387706938333776_159119919660884134_n.png')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-web">
+                    <img src="{{asset('besanconcommunication/maquetteweb.com.png')}}" alt="maquetteweb.com" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>maquetteweb.com</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/maquetteweb.com.png')}}" class="gallery-img glightbox" ><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                            <a href="http://www.maquetteweb.com/" target="_blank"><i class='bx bx-desktop bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-pub">
+                    <img src="{{asset('besanconcommunication/logo/278419314_734094164620371_3217392601501928630_n.jpg')}}" alt="Flyer" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Flyer</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/278419314_734094164620371_3217392601501928630_n.jpg')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 projet-pad filter-pub">
+                    <img src="{{asset('besanconcommunication/logo/278102239_1304963179912962_5262905298599291423_n.jpg')}}" alt="Flyer" class="img-fluid">
+                    <div class="portofolio-info">
+                        <h1>Flyer</h1>
+                        <div class="gallery-item">
+                            <a href="{{asset('besanconcommunication/logo/278102239_1304963179912962_5262905298599291423_n.jpg')}}" class="gallery-img glightbox"><i class='bx bxs-zoom-in bx-tada' ></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button type="button" class="btn devis"  data-bs-toggle="modal" data-bs-target="#contact">Bientôt le vôtre ?</button>
+        </div>
+    </div>
+
+    <div class="container template__section avis top" id="link5">
+        <h1 class="text-center" data-aos="fade-up" data-aos-anchor="#link5">Avis de nos clients</h1>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-item mt-4">
+                        <h4 class="chien text-center mb-4">Jodelapcoaching</h4>
+                        <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>Je voulais un site clair,
+                            esthétique et intuitif.
+                            Tout a été brillamment réalisé, autant visuellement qu'au niveau fonctionnel.
+                            Mr Joly est une personne sérieuse, passionnée, à l'écoute et très professionnelle.
+                            Il a réussi à s'adapter à mes contraintes tout en ajoutant son expérience pour
+                            rendre mon site unique et très pratique.
+                            Je n'hésiterai pas à refaire appel à ses services pour de futurs projets.
+                            Je recommande sans hésiter Mr Vivien Joly<i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-item mt-4">
+                        <h4 class="chien text-center mb-4">Bêtises et Volupthé</h4>
+                        <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>Monsieur Vivien JOLY a réalisé pour notre entreprise un site de vente à emporter
+                            avec les qualités suivantes : patience, écoute, souplesse et qualité de travail
+                            artisanal, réactivité. Dès la mise en ligne tout a fonctionné correctement et les
+                            premières commandes sont arrivées. Pour toutes ces qualités, nous recommandons
+                            Monsieur Vivien JOLY<i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+        <div class="text-center mt-5">
+            <button type="button" class="btn devis"  data-bs-toggle="modal" data-bs-target="#contact">Faites-nous vous aussi confiance </button>
+        </div>
+    </div>
+
+
+
+        <div class="container-fluid template__section contact top" id="link6">
+
+            <h1 class="text-start" data-aos="fade-right" data-aos-anchor="#link6">Nous contacter en fonction ... </h1>
+
+            <div class="rang mt-4">
+
+                <div>
+                    <button type="button" class="but" id="but1" data-bs-toggle="modal" data-bs-target="#site" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Site Internet
+                    </button>
+                </div>
+
+                <div>
+                    <button type="button" class="but" data-bs-toggle="modal" data-bs-target="#logo" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Logo
+                    </button>
+                </div>
+
+                <div>
+                    <button type="button" class="but" id="but2" data-bs-toggle="modal" data-bs-target="#flyer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Publicités
+                    </button>
+                </div>
+
+            </div>
+
+            <h1 class="text-end red2 mt-5" data-aos="fade-up" data-aos-anchor="#link6"> ... de votre projet</h1>
+        </div>
+
+
+
+        <div class="container template__section presentation top" id="link7">
+            <h1 class="text-center" data-aos="fade-up" data-aos-anchor="#link7">Qui sommes-nous ?</h1>
+            <h5 class="mt-4 txt2 h5">2020, la rencontre</h5>
+            <p class="mt-3">Nous nous sommes rencontrés en 2020 sur un projet, à partir de ce jour-là, notre entente a fonctionné et nous avons progressivement poursuivi notre collaboration.
+                Nous avons d'abord créé le site jodelapcoaching.com et fait des œuvres pour les vendre sur les NFTs.</p>
+
+            <h5 class="mt-5 txt2 h5">Notre philosophie</h5>
+            <p class="mt-3">Fort de nos premiers succès, nous décidons début janvier 2022 d'ouvrir notre agence de communication. Notre objectif est de prendre en compte vos besoins et vos attentes
+                concernant vos projets. Nous vous assurons un service sur-mesure avec une réactivité et une efficacité exemplaire.</p>
+
+            <div class="text-center mt-5">
+                <button type="button" class="btn devis"  data-bs-toggle="modal" data-bs-target="#contact">Rejoignez-nous !</button>
+            </div>
+        </div>
+
+
+        <div class="container-fluid template__section localisation" id="link8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.016512993667!2d6.0282830156176885!3d47.23582287916182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478d633990e1b171%3A0x84acbfe6b380d0f2!2s10%20Rue%20de%20Pontarlier%2C%2025000%20Besan%C3%A7on!5e0!3m2!1sfr!2sfr!4v1649525467713!5m2!1sfr!2sfr" width="600" class="mt-5" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+
+        <div class="modal fade" id="site" tabindex="-1" aria-labelledby="devis" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Envie d'un site ?</h5>
+                    </div>
+                    {{ form_start(webForm) }}
+                    <div class="modal-body">
+                        {{ form_row(webForm.firstName) }}
+                        {{ form_row(webForm.name) }}
+                        {{ form_row(webForm.business) }}
+                        {{ form_row(webForm.email) }}
+                        {{ form_row(webForm.telephone) }}
+                        {{ form_row(webForm.sujet) }}
+                        {{ form_row(webForm.contenu) }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                        {{ form_widget(webForm.Envoyer,{ 'attr':{'class': 'ek'} }) }}
+                    </div>
+                </div>
+                {{ form_end(webForm) }}
+            </div>
+        </div>
+
+        <div class="modal fade" id="logo" tabindex="-1" aria-labelledby="devis" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Envie d'un logo ?</h5>
+                    </div>
+                    {{ form_start(logoForm) }}
+                    <div class="modal-body">
+                        {{ form_row(logoForm.firstName) }}
+                        {{ form_row(logoForm.name) }}
+                        {{ form_row(logoForm.business) }}
+                        {{ form_row(logoForm.email) }}
+                        {{ form_row(logoForm.telephone) }}
+                        {{ form_row(logoForm.sujet) }}
+                        {{ form_row(logoForm.contenu) }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                        {{ form_widget(logoForm.Envoyer,{ 'attr':{'class': 'ek'} }) }}
+                    </div>
+                </div>
+                {{ form_end(logoForm) }}
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="flyer" tabindex="-1" aria-labelledby="devis" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Envie de flyers ?</h5>
+                    </div>
+                    {{ form_start(publiciteForm) }}
+                    <div class="modal-body">
+                        {{ form_row(publiciteForm.firstName) }}
+                        {{ form_row(publiciteForm.name) }}
+                        {{ form_row(publiciteForm.business) }}
+                        {{ form_row(publiciteForm.email) }}
+                        {{ form_row(publiciteForm.telephone) }}
+                        {{ form_row(publiciteForm.sujet) }}
+                        {{ form_row(publiciteForm.contenu) }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                        {{ form_widget(publiciteForm.Envoyer,{ 'attr':{'class': 'ek'} }) }}
+                    </div>
+                </div>
+                {{ form_end(publiciteForm) }}
+            </div>
+        </div>
+
+
+    <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="devis" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contactez-nous</h5>
+                </div>
+                {{ form_start(generalForm) }}
+                <div class="modal-body">
+                    {{ form_row(generalForm.firstName) }}
+                    {{ form_row(generalForm.name) }}
+                    {{ form_row(generalForm.business) }}
+                    {{ form_row(generalForm.email) }}
+                    {{ form_row(generalForm.telephone) }}
+                    {{ form_row(generalForm.sujet) }}
+                    {{ form_row(generalForm.contenu) }}
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                    {{ form_widget(generalForm.Envoyer,{ 'attr':{'class': 'ek'} }) }}
+                </div>
+            </div>
+            {{ form_end(generalForm) }}
+        </div>
+    </div>
+
+        <div class="modal fade" id="devis" tabindex="-1" aria-labelledby="devis" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Réalisez votre devis</h5>
+                    </div>
+                    {{ form_start(devisForm) }}
+                    <div class="modal-body">
+                        {{ form_row(devisForm.firstName) }}
+                        {{ form_row(devisForm.name) }}
+                        {{ form_row(devisForm.business) }}
+                        {{ form_row(devisForm.email) }}
+                        {{ form_row(devisForm.telephone) }}
+                        {{ form_row(devisForm.sujet) }}
+                        {{ form_row(devisForm.contenu) }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                        {{ form_widget(devisForm.Envoyer,{ 'attr':{'class': 'ek'} }) }}
+                    </div>
+                </div>
+                {{ form_end(devisForm) }}
+            </div>
+        </div>
+
+        <footer class="mt-5">
+            <div style="width:90%;height:1px;background-color: white;font-size:0; margin-bottom:10px" class="trait-footer"></div>
+
+            <div class="container-fluid">
+                <div class="row text-center">
+
+                    <div class="col-4">
+                        <img src="{{asset('logoSite/_logo__1_-removebg-preview.png')}}" alt="Com25" class="img text-center mt-2">
+                    </div>
+                    <div class="col-4 text-center ba">
+                        <p style="margin-bottom: 0">10 rue de Pontarlier</p>
+                        <p>25000 Besançon</p>
+                    </div>
+                    <div class="col-4 ba">
+                        <p>Tél: 06 15 69 33 53</p>
+                        <p>SIREN : 882354483</p>
+                    </div>
+                    <div>
+                        <p class="mt-2 text-center"><i class='bx bx-copyright' ></i> Copyright <strong>Com25</strong> - Tous droits réservés </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+    <script>
+        const spinner = document.querySelector('#spinner');
+        const page = document.querySelector('#preloader');
+        window.addEventListener('load', (event) => {
+            spinner.style.display ='none';
+            page.style.display ='none';
+        });
+    </script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:100,
+            autoplay: true,
+            autoplayTimeout:8000,
+            responsiveClass:true,
+            pagination: false,
+            dots: false,
+            responsive:{
+                0:{
+                    items:1,
+
+                },
+            }
+        })
+    </script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        const nav = document.querySelector('.nav')
+        window.addEventListener('scroll', fixNav)
+        function fixNav(){
+            if(window.scrollY > nav.offsetHeight){
+                nav.classList.add('active')
+            } else {
+                nav.classList.remove('active')
+            }
+        }
+    </script>
+    <script>
+        const carouselMain = document.getElementById("mainCaroussel");
+        const carouselNav = document.getElementById("carouselNav");
+        new Flickity(carouselMain, {
+            freeScroll: true,
+            contain: true,
+            wrapAround: true,
+            pageDots: false,
+            autoPlay: true,
+            fullscreen: true,
+            fade:true
+
+        });
+        new Flickity(carouselNav, {
+            asNavFor: "#mainCaroussel",
+            freeScroll: true,
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false
+        });
+    </script>
+    <script type="text/javascript">
+        const portfolioLightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    </script>
+    <script>
+        const portfolioDetailsLightbox = GLightbox({
+            selector: '.portfolio-details-lightbox',
+            width: '90%',
+            height: '90vh'
+        });
+        const portfolioDetailsLightbox2 = GLightbox({
+            selector: '.portfolio-details-lightbox2',
+            width: '90%',
+            height: '90vh'
+        });
+    </script>
+    <script>
+        const container = document.querySelector('body');
+        document.getElementById('switch').addEventListener('change', (event) => {
+            console.log()
+            event.target.checked ? container.removeAttribute('data-theme') : container.setAttribute('data-theme', 'dark');
+        });
+    </script>
+    <script>
+        $(document).ready(function (){
+            var $grid = $('.row').isotope({
+                itemSelector:'.projet-pad',
+
+            })
+            $('ul.filter-menu').on('click', 'li', function (){
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({filter: filterValue});
+                return false
+            })
+
+            $('ul.filter-menu li').click(function (){
+                $(this).addClass('is-checked');
+                $(this).siblings().removeClass('is-checked')
+            })
+        });
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            AOS.init({
+                duration: '500',
+                once:true,
+            })
+        });
+
+    </script>
+    <script>
+        //#region - start of - scrollSpy
+        const isoScrollSpy = (targetSelectorAll = "", toggleClass = "") => {
+            const targets = document.querySelectorAll(targetSelectorAll),
+                options = {
+                    threshold: 0.5
+                };
+            const inView = (target) => {
+                const interSecObs = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        const currentElement = entry.target,
+                            currentNav = document.querySelector(`a[href='#${currentElement.id}']`);
+                        if (entry.isIntersecting) {
+                            currentNav.classList.add(toggleClass);
+                        } else {
+                            currentNav.classList.remove(toggleClass);
+                        }
+                    });
+                }, options);
+                interSecObs.observe(target);
+            };
+            targets.forEach(inView);
+        };
+        //#endregion - end of - scrollSpy
+        document.addEventListener("DOMContentLoaded", () => {
+            isoScrollSpy(".template__section", "current");
+        });
+    </script>
+    <script>
+        function scrollWin() {
+            window.scrollTo(0, 1000);
+        }
+    </script>
+    <script>
+        loader();
+
+        document.querySelector('.btn').onclick = loader;
+        function loader(_success) {
+            var obj = document.querySelector('.preloader'),
+                inner = document.querySelector('.preloader_inner'),
+                page = document.querySelector('.page');
+            obj.classList.add('show');
+            page.classList.remove('show');
+            var w = 0,
+                t = setInterval(function() {
+                    w = w + 1;
+                    inner.textContent = w+'%';
+                    window.addEventListener('load', () => {
+                        obj.classList.remove('show');
+                        page.classList.add('show');
+                        page.classList.remove('active')
+                    })
+                });
+        }
+    </script>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        let menuOpen = false
+        menuBtn.addEventListener('click', () => {
+            if(!menuOpen){
+                menuBtn.classList.add('open')
+                menuOpen=true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        })
+    </script>
+    <script>
+        var fade_out = function() {
+            $(".alert").fadeOut().empty();
+        }
+        setTimeout(fade_out, 2000);
+    </script>
+
+{% endblock %}
